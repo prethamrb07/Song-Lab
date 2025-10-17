@@ -23,11 +23,11 @@ public class ReadData {
             int duration = Integer.parseInt(in.nextLine().split(";")[4]);
             double shake = Integer.parseInt(in.nextLine().split(";")[5]);
             String obcene = in.nextLine().split(";")[6];
-            String danceability = in.nextLine().split(";")[7];
+            double danceability = Double.parseDouble(in.nextLine().split(";")[7]);
             String loudness = in.nextLine().split(";")[8];
             String topic = in.nextLine().split(";")[9];
 
-            songs[count] = new Song(String artist, String track, int release_date, String genre, int duration, double shake, String obcene, String danceability, String loudness, String topic);
+            songs[count] = new Song( artist, track,  genre,  release_date, danceability);
          }  
          in.close();
       }catch(IOException e){
