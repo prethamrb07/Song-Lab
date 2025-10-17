@@ -3,8 +3,21 @@ public class Song {
    private int year;
    private double danceability;
    
-   public class(String artist, String title, String genre, int year, double danceability)
+   public Song(String artist, String title, String genre, int year, double danceability)
    {
-      this artist = artist;
+      this.artist = artist;
+      this.title = title;
+      this.genre = genre;
+      this.year = year;
+      this.danceability = danceability;
+   }
+   public String getArtist(){
+      return artist;
+   }
+   public String getTitle(){
+      return title;
+   }
+   public int getYear(){
+      return year;
    }
 }
